@@ -1,0 +1,20 @@
+b = 'singer_id,singer_name,music_img,music_name,music_name2,singer,pubDate,music_cat,storage_medium,music_type,music_mark,comment_num,comment_url,music_id'
+
+CREATE TABLE `dmusic` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `singer_id` int(11) DEFAULT NULL COMMENT '歌手id',
+  `singer_name` varchar(200) DEFAULT NULL COMMENT '歌手名称',
+  `music_img` varchar(200) DEFAULT NULL COMMENT '歌曲图片',
+  `music_name` varchar(100) DEFAULT NULL COMMENT '歌曲名称1',
+  `music_name2` varchar(100) DEFAULT NULL COMMENT '歌曲名称2',
+  `pubDate` varchar(100) DEFAULT NULL COMMENT '发行时间',
+  `music_cat` varchar(100) DEFAULT NULL COMMENT '歌曲分类',
+  `storage_medium` varchar(100) DEFAULT NULL COMMENT '存储介质',
+  `music_type` varchar(100) DEFAULT NULL COMMENT '歌曲类型',
+  `music_mark` varchar(100) DEFAULT NULL COMMENT '歌曲评分',
+  `comment_num` varchar(100) DEFAULT NULL COMMENT '评论数量',
+  `comment_url` varchar(100) DEFAULT NULL COMMENT '评论url',
+  `music_id` varchar(100) DEFAULT NULL COMMENT '歌曲id',      
+  `ctime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=61 DEFAULT CHARSET=utf8 COMMENT='豆瓣音乐歌曲信息'
