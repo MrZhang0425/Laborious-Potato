@@ -9,7 +9,7 @@ import pymysql
 import time
 import datetime
 
-class GetjobPipeline(object):
+class getJob2Pipeline(object):
     def __init__(self):
         self.conn = pymysql.connect(host='127.0.0.1',port=3306,user='root',password='',db='Hunan_University',charset='utf8')
         self.cursor = self.conn.cursor()

@@ -19,7 +19,7 @@ class HuSpider(scrapy.Spider):
             )
 
     def parse_page(self,response):
-        print('='*10 + 'parse_page')
+        # print('='*10 + 'parse_page')
         text = response.body.decode()
         if len(text)>200:
             content = json.loads(text)
@@ -90,7 +90,7 @@ class HuSpider(scrapy.Spider):
             print("parse2" + e)
 
     def parse3(self,response):
-        print('='*10 + 'parse3')
+        # print('='*10 + 'parse3')
         item = copy.deepcopy(response.meta['item'])
         detail_url = response.url
         li_job_welfare = response.xpath('//div[@id="data_details"]/div[1]/div[1]/div[1]//*[@class="job-welfare"]')
